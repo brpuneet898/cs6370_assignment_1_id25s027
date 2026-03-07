@@ -1,0 +1,35 @@
+PART 3 - QUESTION 2
+======================================================================
+
+Task performed:
+Using the word-tokenized Cranfield dataset, Porter stemming and WordNet lemmatization were performed.
+Sentence segmentation was done using NLTK Punkt and word tokenization was done using the NLTK Penn Treebank tokenizer.
+
+Vocabulary size comparison:
+Original vocabulary size      : 6812
+Stemmed vocabulary size       : 4226
+Lemmatized vocabulary size    : 5434
+Reduction after stemming      : 2586
+Reduction after lemmatization : 1378
+
+Interpretation:
+Stemming usually reduces the vocabulary more aggressively because multiple inflected forms are collapsed by suffix stripping.
+Lemmatization also reduces vocabulary, but usually less aggressively, because it tries to preserve valid dictionary forms.
+
+Examples of over-stemming:
+investigation -> stemmed: investig | lemmatized: investigation
+aerodynamics -> stemmed: aerodynam | lemmatized: aerodynamics
+study -> stemmed: studi | lemmatized: study
+determine -> stemmed: determin | lemmatized: determine
+distribution -> stemmed: distribut | lemmatized: distribution
+
+Examples where lemmatization preserves semantic meaning better:
+experimental -> stemmed: experiment | lemmatized: experimental
+investigation -> stemmed: investig | lemmatized: investigation
+aerodynamics -> stemmed: aerodynam | lemmatized: aerodynamics
+study -> stemmed: studi | lemmatized: study
+propeller -> stemmed: propel | lemmatized: propeller
+
+Conclusion:
+Porter stemming is more aggressive and often produces truncated forms that are useful for matching but less interpretable.
+WordNet lemmatization preserves meaningful base forms better and is therefore linguistically cleaner, although it may reduce vocabulary less than stemming.

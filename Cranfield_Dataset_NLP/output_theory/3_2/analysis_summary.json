@@ -1,0 +1,125 @@
+{
+  "number_of_documents": 1400,
+  "pipeline_used": {
+    "sentence_segmentation": "NLTK Punkt",
+    "word_tokenization": "NLTK Penn Treebank",
+    "stemming": "Porter Stemmer",
+    "lemmatization": "WordNet Lemmatizer (POS-aware)"
+  },
+  "token_statistics": {
+    "total_original_tokens": 239132,
+    "total_stemmed_tokens": 239132,
+    "total_lemmatized_tokens": 239132
+  },
+  "vocabulary_statistics": {
+    "original_vocabulary_size": 6812,
+    "stemmed_vocabulary_size": 4226,
+    "lemmatized_vocabulary_size": 5434,
+    "reduction_after_stemming": 2586,
+    "reduction_after_lemmatization": 1378
+  },
+  "over_stemming_examples": [
+    {
+      "original": "investigation",
+      "stemmed": "investig",
+      "lemmatized": "investigation"
+    },
+    {
+      "original": "aerodynamics",
+      "stemmed": "aerodynam",
+      "lemmatized": "aerodynamics"
+    },
+    {
+      "original": "study",
+      "stemmed": "studi",
+      "lemmatized": "study"
+    },
+    {
+      "original": "determine",
+      "stemmed": "determin",
+      "lemmatized": "determine"
+    },
+    {
+      "original": "distribution",
+      "stemmed": "distribut",
+      "lemmatized": "distribution"
+    },
+    {
+      "original": "increase",
+      "stemmed": "increas",
+      "lemmatized": "increase"
+    },
+    {
+      "original": "angles",
+      "stemmed": "angl",
+      "lemmatized": "angle"
+    },
+    {
+      "original": "velocity",
+      "stemmed": "veloc",
+      "lemmatized": "velocity"
+    },
+    {
+      "original": "evaluation",
+      "stemmed": "evalu",
+      "lemmatized": "evaluation"
+    },
+    {
+      "original": "basis",
+      "stemmed": "basi",
+      "lemmatized": "basis"
+    }
+  ],
+  "lemmatization_preserves_meaning_examples": [
+    {
+      "original": "experimental",
+      "stemmed": "experiment",
+      "lemmatized": "experimental"
+    },
+    {
+      "original": "investigation",
+      "stemmed": "investig",
+      "lemmatized": "investigation"
+    },
+    {
+      "original": "aerodynamics",
+      "stemmed": "aerodynam",
+      "lemmatized": "aerodynamics"
+    },
+    {
+      "original": "study",
+      "stemmed": "studi",
+      "lemmatized": "study"
+    },
+    {
+      "original": "propeller",
+      "stemmed": "propel",
+      "lemmatized": "propeller"
+    },
+    {
+      "original": "determine",
+      "stemmed": "determin",
+      "lemmatized": "determine"
+    },
+    {
+      "original": "distribution",
+      "stemmed": "distribut",
+      "lemmatized": "distribution"
+    },
+    {
+      "original": "increase",
+      "stemmed": "increas",
+      "lemmatized": "increase"
+    },
+    {
+      "original": "different",
+      "stemmed": "differ",
+      "lemmatized": "different"
+    },
+    {
+      "original": "angles",
+      "stemmed": "angl",
+      "lemmatized": "angle"
+    }
+  ]
+}
