@@ -1,0 +1,4 @@
+Segmenter,No. of Test Cases,No. of Correct Segmentations,No. of Errors
+Naive Top-Down,15,0,15
+NLTK Punkt,15,12,3
+spaCy,15,14,1

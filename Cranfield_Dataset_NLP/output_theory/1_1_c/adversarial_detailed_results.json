@@ -1,0 +1,334 @@
+[
+    {
+        "id": 1,
+        "category": "Abbreviation",
+        "text": "Dr. Smith arrived late for the meeting.",
+        "gold": [
+            "Dr. Smith arrived late for the meeting."
+        ],
+        "naive_pred": [
+            "Dr",
+            "Smith arrived late for the meeting"
+        ],
+        "punkt_pred": [
+            "Dr. Smith arrived late for the meeting."
+        ],
+        "spacy_pred": [
+            "Dr. Smith arrived late for the meeting."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 2,
+        "category": "MAbbreviation",
+        "text": "Mr. and Mrs. Johnson live in Chennai.",
+        "gold": [
+            "Mr. and Mrs. Johnson live in Chennai."
+        ],
+        "naive_pred": [
+            "Mr",
+            "and Mrs",
+            "Johnson live in Chennai"
+        ],
+        "punkt_pred": [
+            "Mr. and Mrs. Johnson live in Chennai."
+        ],
+        "spacy_pred": [
+            "Mr. and Mrs. Johnson live in Chennai."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 3,
+        "category": "Abbreviation",
+        "text": "The meeting starts at 10 a.m. tomorrow.",
+        "gold": [
+            "The meeting starts at 10 a.m. tomorrow."
+        ],
+        "naive_pred": [
+            "The meeting starts at 10 a",
+            "m",
+            "tomorrow"
+        ],
+        "punkt_pred": [
+            "The meeting starts at 10 a.m. tomorrow."
+        ],
+        "spacy_pred": [
+            "The meeting starts at 10 a.m. tomorrow."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 4,
+        "category": "Decimal numbers",
+        "text": "She earned 3.75 out of 4.0 in the exam.",
+        "gold": [
+            "She earned 3.75 out of 4.0 in the exam."
+        ],
+        "naive_pred": [
+            "She earned 3",
+            "75 out of 4",
+            "0 in the exam"
+        ],
+        "punkt_pred": [
+            "She earned 3.75 out of 4.0 in the exam."
+        ],
+        "spacy_pred": [
+            "She earned 3.75 out of 4.0 in the exam."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 5,
+        "category": "Initials",
+        "text": "The U.S.A. team won the match easily.",
+        "gold": [
+            "The U.S.A. team won the match easily."
+        ],
+        "naive_pred": [
+            "The U",
+            "S",
+            "A",
+            "team won the match easily"
+        ],
+        "punkt_pred": [
+            "The U.S.A. team won the match easily."
+        ],
+        "spacy_pred": [
+            "The U.S.A. team won the match easily."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 6,
+        "category": "Initials",
+        "text": "J.K. Rowling wrote several famous novels.",
+        "gold": [
+            "J.K. Rowling wrote several famous novels."
+        ],
+        "naive_pred": [
+            "J",
+            "K",
+            "Rowling wrote several famous novels"
+        ],
+        "punkt_pred": [
+            "J.K. Rowling wrote several famous novels."
+        ],
+        "spacy_pred": [
+            "J.K. Rowling wrote several famous novels."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 7,
+        "category": "Ellipsis",
+        "text": "Wait... I am not ready yet.",
+        "gold": [
+            "Wait...",
+            "I am not ready yet."
+        ],
+        "naive_pred": [
+            "Wait",
+            "I am not ready yet"
+        ],
+        "punkt_pred": [
+            "Wait...",
+            "I am not ready yet."
+        ],
+        "spacy_pred": [
+            "Wait... I am not ready yet."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": false
+    },
+    {
+        "id": 8,
+        "category": "Multiple punctuation",
+        "text": "What?! Are you serious?",
+        "gold": [
+            "What?!",
+            "Are you serious?"
+        ],
+        "naive_pred": [
+            "What",
+            "Are you serious"
+        ],
+        "punkt_pred": [
+            "What?!",
+            "Are you serious?"
+        ],
+        "spacy_pred": [
+            "What?!",
+            "Are you serious?"
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 9,
+        "category": "Quotes",
+        "text": "She said, \"I will come tomorrow.\"",
+        "gold": [
+            "She said, \"I will come tomorrow.\""
+        ],
+        "naive_pred": [
+            "She said, \"I will come tomorrow",
+            "\""
+        ],
+        "punkt_pred": [
+            "She said, \"I will come tomorrow.\""
+        ],
+        "spacy_pred": [
+            "She said, \"I will come tomorrow.\""
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 10,
+        "category": "Quotes",
+        "text": "Did he really say \"No.\" and leave?",
+        "gold": [
+            "Did he really say \"No.\" and leave?"
+        ],
+        "naive_pred": [
+            "Did he really say \"No",
+            "\" and leave"
+        ],
+        "punkt_pred": [
+            "Did he really say \"No.\"",
+            "and leave?"
+        ],
+        "spacy_pred": [
+            "Did he really say \"No.\" and leave?"
+        ],
+        "naive_correct": false,
+        "punkt_correct": false,
+        "spacy_correct": true
+    },
+    {
+        "id": 11,
+        "category": "Decimal Numbers",
+        "text": "Please refer to Sec. 3.2 for details.",
+        "gold": [
+            "Please refer to Sec. 3.2 for details."
+        ],
+        "naive_pred": [
+            "Please refer to Sec",
+            "3",
+            "2 for details"
+        ],
+        "punkt_pred": [
+            "Please refer to Sec.",
+            "3.2 for details."
+        ],
+        "spacy_pred": [
+            "Please refer to Sec. 3.2 for details."
+        ],
+        "naive_correct": false,
+        "punkt_correct": false,
+        "spacy_correct": true
+    },
+    {
+        "id": 12,
+        "category": "Abbreviation",
+        "text": "The price is Rs. 250 only.",
+        "gold": [
+            "The price is Rs. 250 only."
+        ],
+        "naive_pred": [
+            "The price is Rs",
+            "250 only"
+        ],
+        "punkt_pred": [
+            "The price is Rs.",
+            "250 only."
+        ],
+        "spacy_pred": [
+            "The price is Rs. 250 only."
+        ],
+        "naive_correct": false,
+        "punkt_correct": false,
+        "spacy_correct": true
+    },
+    {
+        "id": 13,
+        "category": "Link",
+        "text": "My email is abc.xyz@example.com for official contact.",
+        "gold": [
+            "My email is abc.xyz@example.com for official contact."
+        ],
+        "naive_pred": [
+            "My email is abc",
+            "xyz@example",
+            "com for official contact"
+        ],
+        "punkt_pred": [
+            "My email is abc.xyz@example.com for official contact."
+        ],
+        "spacy_pred": [
+            "My email is abc.xyz@example.com for official contact."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 14,
+        "category": "Link",
+        "text": "Visit www.example.com for more information.",
+        "gold": [
+            "Visit www.example.com for more information."
+        ],
+        "naive_pred": [
+            "Visit www",
+            "example",
+            "com for more information"
+        ],
+        "punkt_pred": [
+            "Visit www.example.com for more information."
+        ],
+        "spacy_pred": [
+            "Visit www.example.com for more information."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    },
+    {
+        "id": 15,
+        "category": "Abbreviation",
+        "text": "He lives on St. Thomas Road near the church.",
+        "gold": [
+            "He lives on St. Thomas Road near the church."
+        ],
+        "naive_pred": [
+            "He lives on St",
+            "Thomas Road near the church"
+        ],
+        "punkt_pred": [
+            "He lives on St. Thomas Road near the church."
+        ],
+        "spacy_pred": [
+            "He lives on St. Thomas Road near the church."
+        ],
+        "naive_correct": false,
+        "punkt_correct": true,
+        "spacy_correct": true
+    }
+]

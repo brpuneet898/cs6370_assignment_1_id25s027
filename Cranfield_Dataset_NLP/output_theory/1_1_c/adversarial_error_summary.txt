@@ -1,0 +1,18 @@
+Adversarial Sentence Segmentation Evaluation Summary
+=======================================================
+
+Naive Top-Down
+  Total Test Cases           : 15
+  Correct Segmentations      : 0
+  Errors                     : 15
+
+NLTK Punkt
+  Total Test Cases           : 15
+  Correct Segmentations      : 12
+  Errors                     : 3
+
+spaCy
+  Total Test Cases           : 15
+  Correct Segmentations      : 14
+  Errors                     : 1
+

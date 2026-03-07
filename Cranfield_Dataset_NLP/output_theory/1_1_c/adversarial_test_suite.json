@@ -1,0 +1,124 @@
+[
+    {
+        "id": 1,
+        "category": "Abbreviation",
+        "text": "Dr. Smith arrived late for the meeting.",
+        "gold": [
+            "Dr. Smith arrived late for the meeting."
+        ]
+    },
+    {
+        "id": 2,
+        "category": "MAbbreviation",
+        "text": "Mr. and Mrs. Johnson live in Chennai.",
+        "gold": [
+            "Mr. and Mrs. Johnson live in Chennai."
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Abbreviation",
+        "text": "The meeting starts at 10 a.m. tomorrow.",
+        "gold": [
+            "The meeting starts at 10 a.m. tomorrow."
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Decimal numbers",
+        "text": "She earned 3.75 out of 4.0 in the exam.",
+        "gold": [
+            "She earned 3.75 out of 4.0 in the exam."
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Initials",
+        "text": "The U.S.A. team won the match easily.",
+        "gold": [
+            "The U.S.A. team won the match easily."
+        ]
+    },
+    {
+        "id": 6,
+        "category": "Initials",
+        "text": "J.K. Rowling wrote several famous novels.",
+        "gold": [
+            "J.K. Rowling wrote several famous novels."
+        ]
+    },
+    {
+        "id": 7,
+        "category": "Ellipsis",
+        "text": "Wait... I am not ready yet.",
+        "gold": [
+            "Wait...",
+            "I am not ready yet."
+        ]
+    },
+    {
+        "id": 8,
+        "category": "Multiple punctuation",
+        "text": "What?! Are you serious?",
+        "gold": [
+            "What?!",
+            "Are you serious?"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "Quotes",
+        "text": "She said, \"I will come tomorrow.\"",
+        "gold": [
+            "She said, \"I will come tomorrow.\""
+        ]
+    },
+    {
+        "id": 10,
+        "category": "Quotes",
+        "text": "Did he really say \"No.\" and leave?",
+        "gold": [
+            "Did he really say \"No.\" and leave?"
+        ]
+    },
+    {
+        "id": 11,
+        "category": "Decimal Numbers",
+        "text": "Please refer to Sec. 3.2 for details.",
+        "gold": [
+            "Please refer to Sec. 3.2 for details."
+        ]
+    },
+    {
+        "id": 12,
+        "category": "Abbreviation",
+        "text": "The price is Rs. 250 only.",
+        "gold": [
+            "The price is Rs. 250 only."
+        ]
+    },
+    {
+        "id": 13,
+        "category": "Link",
+        "text": "My email is abc.xyz@example.com for official contact.",
+        "gold": [
+            "My email is abc.xyz@example.com for official contact."
+        ]
+    },
+    {
+        "id": 14,
+        "category": "Link",
+        "text": "Visit www.example.com for more information.",
+        "gold": [
+            "Visit www.example.com for more information."
+        ]
+    },
+    {
+        "id": 15,
+        "category": "Abbreviation",
+        "text": "He lives on St. Thomas Road near the church.",
+        "gold": [
+            "He lives on St. Thomas Road near the church."
+        ]
+    }
+]
