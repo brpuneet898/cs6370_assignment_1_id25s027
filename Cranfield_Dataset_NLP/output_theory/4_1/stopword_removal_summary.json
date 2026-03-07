@@ -1,0 +1,12 @@
+{
+  "number_of_documents": 1400,
+  "sentence_segmenter_used": "NLTK Punkt",
+  "tokenizer_used": "NLTK Penn Treebank",
+  "stopword_list_used": "NLTK English stopwords (curated list)",
+  "statistics": {
+    "total_sentences": 9969,
+    "total_tokens_before_stopword_removal": 239132,
+    "total_tokens_after_stopword_removal": 146114,
+    "total_stopwords_removed": 93018
+  }
+}

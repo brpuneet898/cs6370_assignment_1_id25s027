@@ -1,0 +1,30 @@
+PART 4 - QUESTION 1
+======================================================================
+
+Task performed:
+Stopwords were removed from the tokenized Cranfield documents using a curated stopword list.
+The curated list used here is the NLTK English stopword list.
+
+Pipeline used:
+1. Sentence segmentation: NLTK Punkt
+2. Word tokenization: NLTK Penn Treebank tokenizer
+3. Stopword removal: NLTK curated English stopword list
+
+Corpus statistics:
+Number of documents: 1400
+Total sentences: 9969
+Total tokens before stopword removal: 239132
+Total tokens after stopword removal: 146114
+Total stopwords removed: 93018
+
+Interpretation:
+Common function words such as articles, prepositions, conjunctions, and auxiliary verbs are removed.
+This reduces noise in the document representation and keeps more content-bearing words for later IR tasks.
+
+Saved files:
+1. segmented_docs_punkt.json
+2. tokenized_docs_ptb.json
+3. stopword_removed_docs_nltk.json
+4. stopword_removal_summary.json
+5. sample_stopword_removal_comparison.json
+6. report_notes.txt
