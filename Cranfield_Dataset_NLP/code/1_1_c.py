@@ -5,21 +5,10 @@ from sentenceSegmentation import SentenceSegmentation
 
 
 def normalize_segments(segments):
-    """
-    Normalize predicted/gold sentence lists for exact comparison.
-    """
     return [s.strip() for s in segments if s and s.strip()]
 
 
 def build_test_suite():
-    """
-    Adversarial test suite defined inside the script itself.
-    Each item contains:
-    - id
-    - category
-    - text
-    - gold segmentation
-    """
     return [
         {
             "id": 1,
