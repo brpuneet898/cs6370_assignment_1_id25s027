@@ -1,0 +1,41 @@
+PART 2 - QUESTION 3
+============================================================
+
+Task performed:
+Word tokenization was performed on the sentence-segmented Cranfield documents using:
+1. Proposed top-down tokenizer (naive regex-based tokenizer)
+2. NLTK Penn Treebank tokenizer
+3. spaCy tokenizer
+
+Sentence segmentation used before tokenization:
+Punkt sentence segmenter
+
+Corpus statistics:
+Number of documents: 1400
+Total sentence units after segmentation: 1400 document-level entries
+
+Tokenization statistics:
+Naive tokenizer   -> total sentences: 9969, total tokens: 226526, average tokens/sentence: 22.7230
+PTB tokenizer     -> total sentences: 9969, total tokens: 239132, average tokens/sentence: 23.9876
+spaCy tokenizer   -> total sentences: 9969, total tokens: 249376, average tokens/sentence: 25.0151
+
+Scenario where the proposed top-down tokenizer performs better:
+When only simple alphabetic word extraction is desired and punctuation should be discarded completely.
+Example: 'engine-performance, fuel-flow, and pressure?'
+Naive tokenizer output may be cleaner for a basic IR pipeline: ['engine', 'performance', 'fuel', 'flow', 'and', 'pressure']
+PTB and spaCy typically preserve punctuation or split hyphenated forms into more pieces, which may be less convenient in a simplistic indexing setup.
+
+Scenario where the proposed top-down tokenizer performs worse:
+When the text contains contractions, abbreviations, decimals, or hyphenated expressions.
+Example: "The U.S. aircraft can't maintain 3.5-mile stability."
+Naive tokenizer may produce: ['The', 'U', 'S', 'aircraft', 'can', 't', 'maintain', '3', '5', 'mile', 'stability']
+This loses important information. PTB and spaCy handle such cases more linguistically.
+
+Saved files:
+1. segmented_docs_punkt.json
+2. tokenized_docs_naive.json
+3. tokenized_docs_ptb.json
+4. tokenized_docs_spacy.json
+5. tokenization_statistics.json
+6. sample_tokenization_comparison.json
+7. report_notes.txt

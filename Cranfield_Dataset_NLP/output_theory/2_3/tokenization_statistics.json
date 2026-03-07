@@ -1,0 +1,22 @@
+{
+  "number_of_documents": 1400,
+  "number_of_sentence_segmented_documents": 1400,
+  "sentence_segmenter_used": "Punkt",
+  "tokenization_statistics": {
+    "naive_top_down": {
+      "total_sentences": 9969,
+      "total_tokens": 226526,
+      "average_tokens_per_sentence": 22.72304142842813
+    },
+    "penn_treebank": {
+      "total_sentences": 9969,
+      "total_tokens": 239132,
+      "average_tokens_per_sentence": 23.98756144046544
+    },
+    "spacy": {
+      "total_sentences": 9969,
+      "total_tokens": 249376,
+      "average_tokens_per_sentence": 25.015146955562244
+    }
+  }
+}
