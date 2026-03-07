@@ -1,2 +1,3 @@
-ntlk
+nltk
 spacy
+numpy
