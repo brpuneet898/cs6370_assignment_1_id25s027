@@ -1,7 +1,10 @@
+import nltk
+nltk.download('stopwords')
 from util import *
 
 # Add your import statements here
 from nltk.corpus import stopwords
+
 
 class StopwordRemoval():
 
