@@ -22,7 +22,8 @@ else:
 
 
 class SearchEngine:
-
+	## we call all the essential function predefine in other py files like tokenizers,
+	## sentence segmenters, inflection reducers and finally stopword removers. 
 	def __init__(self, args):
 		self.args = args
 		self.tokenizer = Tokenization()
@@ -35,12 +36,14 @@ class SearchEngine:
 			os.makedirs(self.args.out_folder)
 
 	def segmentSentences(self, text):
+		## as per the defination, we have naive and punkt methods defined to call the appropriate functions. 
 		if self.args.segmenter == "naive":
 			return self.sentenceSegmenter.naive(text)
 		elif self.args.segmenter == "punkt":
 			return self.sentenceSegmenter.punkt(text)
 
 	def tokenize(self, text):
+		## tokenizer also has two methods naive or penn tree back. it goes and calls the appropriate function. 
 		if self.args.tokenizer == "naive":
 			return self.tokenizer.naive(text)
 		elif self.args.tokenizer == "ptb":
@@ -54,7 +57,7 @@ class SearchEngine:
 
 
 	def preprocessQueries(self, queries):
-
+		## this preprocess the queries to make sure that we get the intented output. 
 		segmentedQueries = []
 		for query in queries:
 			segmentedQueries.append(self.segmentSentences(query))
@@ -87,7 +90,7 @@ class SearchEngine:
 
 
 	def preprocessDocs(self, docs):
-
+		## this is the preprocessing step for all the documents, again used to get the intented output files.
 		segmentedDocs = []
 		for doc in docs:
 			segmentedDocs.append(self.segmentSentences(doc))
@@ -120,7 +123,7 @@ class SearchEngine:
 
 
 	def evaluateDataset(self):
-
+		## here we evaluate the cranfield dataset. and do the query * documents.
 		query_path = os.path.join(self.args.dataset, "cran_queries.json")
 		doc_path = os.path.join(self.args.dataset, "cran_docs.json")
 
@@ -138,7 +141,7 @@ class SearchEngine:
 
 
 	def handleCustomQuery(self):
-
+		## this is custom function made to handle any custom query with respect to cranfield dataset documents. 
 		print("Enter query below")
 		query = input()
 
