@@ -5,6 +5,7 @@ from statistics import mean
 from sentenceSegmentation import SentenceSegmentation
 from tokenization import Tokenization
 
+## this file is created for question 2 part 3. 
 
 def ensure_dir(path):
     if not os.path.exists(path):
@@ -12,6 +13,8 @@ def ensure_dir(path):
 
 
 def flatten_tokenized_docs(tokenized_docs):
+    ## whatever the tokenization method, we need to calculate the total number of sentences, total number of tokens 
+    ## and average tokens per sentence.
     total_sentences = 0
     total_tokens = 0
 
@@ -28,6 +31,8 @@ def flatten_tokenized_docs(tokenized_docs):
 
 
 def main():
+    ## main function to perform sentence segmentation and tokenization on the Cranfield dataset and save the outputs 
+    ## and statistics.
     current_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(current_dir)
 
