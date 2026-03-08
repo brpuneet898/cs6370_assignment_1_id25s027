@@ -4,11 +4,15 @@ from sentenceSegmentation import SentenceSegmentation
 from tokenization import Tokenization
 from stopwordRemoval import StopwordRemoval
 
+## this file is for the question 4 part 1. 
+
 def ensure_dir(path):
+    ## Create the directory if it doesn't exist
     if not os.path.exists(path):
         os.makedirs(path)
 
 def count_tokens(tokenized_docs):
+    ## Count total tokens in the tokenized documents
     total_tokens = 0
     for doc in tokenized_docs:
         for sent in doc:
@@ -16,6 +20,7 @@ def count_tokens(tokenized_docs):
     return total_tokens
 
 def count_sentences(segmented_docs):
+    ## Count total sentences in the segmented documents
     total_sentences = 0
     for doc in segmented_docs:
         total_sentences += len(doc)
@@ -23,6 +28,7 @@ def count_sentences(segmented_docs):
 
 
 def main():
+    ## Determine paths
     current_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(current_dir)
 
@@ -36,11 +42,11 @@ def main():
 
     doc_ids = []
     docs = []
-
+    ## Extract document IDs and bodies from the JSON data
     for item in docs_json:
         doc_ids.append(item.get("id"))
         docs.append(item.get("body", ""))
-
+    ## calling all the classes for sentence segmentation, tokenization and stopword removal.
     sentence_segmenter = SentenceSegmentation()
     tokenizer = Tokenization()
     stopword_remover = StopwordRemoval()
@@ -92,7 +98,7 @@ def main():
     total_tokens_before = count_tokens(tokenized_docs)
     total_tokens_after = count_tokens(stopword_removed_docs)
     total_stopwords_removed = total_tokens_before - total_tokens_after
-
+    ## preping a summary of the process and statistics to be saved in a JSON file and also a text file for report notes.
     summary = {
         "number_of_documents": total_docs,
         "sentence_segmenter_used": "NLTK Punkt",
@@ -164,7 +170,7 @@ def main():
 
     with open(os.path.join(output_dir, "report_notes.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(report_lines))
-
+    ## printing summary to console as well for quick reference.
     print("Done.")
     print("All outputs saved in:", output_dir)
     print()
