@@ -8,11 +8,15 @@ from sentenceSegmentation import SentenceSegmentation
 from tokenization import Tokenization
 from inflectionReduction import InflectionReduction
 
+## this file is created for question 3 part 2.
+
 def ensure_dir(path):
+    # helper function to ensure the output directory exists before saving outputs.
     if not os.path.exists(path):
         os.makedirs(path)
 
 def safe_nltk_downloads():
+    # helper function to safely download necessary NLTK resources without crashing if there's an issue.
     resources = [
         "punkt",
         "wordnet",
@@ -29,6 +33,7 @@ def safe_nltk_downloads():
 
 
 def get_wordnet_pos(treebank_tag):
+    ## helper function to convert NLTK POS tags to WordNet POS tags for better lemmatization results.
     if treebank_tag.startswith("J"):
         return wordnet.ADJ
     if treebank_tag.startswith("V"):
@@ -41,6 +46,8 @@ def get_wordnet_pos(treebank_tag):
 
 
 def flatten_tokenized_docs(tokenized_docs):
+    ## helper function to flatten the nested list of tokenized sentences into a single list of tokens for statistics 
+    ## and analysis.
     flat_tokens = []
     for doc in tokenized_docs:
         for sent in doc:
@@ -50,6 +57,7 @@ def flatten_tokenized_docs(tokenized_docs):
 
 
 def lowercase_alpha_tokens(tokens):
+    ## helper function to filter out non-alphabetic tokens and convert to lowercase for vocabulary analysis.
     cleaned = []
     for token in tokens:
         if token.isalpha():
@@ -58,9 +66,12 @@ def lowercase_alpha_tokens(tokens):
 
 
 def pos_aware_lemmatize_docs(tokenized_docs):
+    ## helper function to perform POS-aware lemmatization on the tokenized documents using WordNet Lemmatizer.
     lemmatizer = WordNetLemmatizer()
     lemmatized_docs = []
-
+    ## we will iterate through each document, then through each sentence, and then through each token. 
+    ## For each token, we will get its POS tag, convert it to the appropriate WordNet POS tag, and then lemmatize it. 
+    ## The result will be a nested list of lemmatized sentences for each document.
     for doc in tokenized_docs:
         lemmatized_doc = []
         for sent in doc:
@@ -77,18 +88,22 @@ def pos_aware_lemmatize_docs(tokenized_docs):
 
 
 def compute_vocab(tokens):
+    ## helper function to compute the unique vocabulary from a list of tokens.
     return set(tokens)
 
 
 def token_frequency(tokens):
+    ## helper function to compute the frequency of each token in the list of tokens using Counter.
     return Counter(tokens)
 
 
 def is_good_example_token(token):
+    ## helper function to filter out tokens that are not good candidates for over-stemming or semantic preservation examples.
     return token.isalpha() and len(token) >= 4
 
 
 def find_overstemming_examples(original_tokens, stemmed_tokens, lemmatized_tokens, max_examples=12):
+    ## helper function to find examples of over-stemming where the stemmed form is not a valid word but the lemmatized form is.
     examples = []
     seen = set()
 
@@ -124,6 +139,9 @@ def find_overstemming_examples(original_tokens, stemmed_tokens, lemmatized_token
 
 
 def find_semantic_preservation_examples(original_tokens, stemmed_tokens, lemmatized_tokens, max_examples=12):
+    ## helper function to find examples where lemmatization preserves semantic meaning better than stemming, 
+    ## such as when the lemmatized form is the same as the original but the stemmed form is different and 
+    ## potentially less meaningful.
     examples = []
     seen = set()
 
@@ -158,6 +176,7 @@ def find_semantic_preservation_examples(original_tokens, stemmed_tokens, lemmati
 
 
 def main():
+    ## main function to perform sentence segmentation and tokenization on the Cranfield dataset and save the outputs
     safe_nltk_downloads()
 
     current_dir = os.path.dirname(os.path.abspath(__file__))
