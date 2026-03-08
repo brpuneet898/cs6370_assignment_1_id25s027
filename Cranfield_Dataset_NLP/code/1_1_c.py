@@ -3,12 +3,15 @@ import json
 import csv
 from sentenceSegmentation import SentenceSegmentation
 
+## this file is created for question 1 part 1.c .
 
 def normalize_segments(segments):
+    ## function to normalize the segments after sentence segmenatation to move to the next steps. 
     return [s.strip() for s in segments if s and s.strip()]
 
 
 def build_test_suite():
+    ## this is the custom test suite as told in the question. 
     return [
         {
             "id": 1,
@@ -104,6 +107,7 @@ def build_test_suite():
 
 
 def get_predictions(segmenter, text):
+    ## helper function to return the results of all the three sentence segmentation methods for a given text.
     return {
         "naive": normalize_segments(segmenter.naive(text)),
         "punkt": normalize_segments(segmenter.punkt(text)),
@@ -112,6 +116,9 @@ def get_predictions(segmenter, text):
 
 
 def evaluate(test_suite, segmenter):
+    ## helper evaluation function to return the proper dataframe of the results.
+    ## we are going to record total number of sentences, correct number of sentences with respect to gold standard.
+    ## and the number of errors for each of the three methods.
     detailed_rows = []
 
     summary = {
@@ -149,6 +156,7 @@ def evaluate(test_suite, segmenter):
 
 
 def save_outputs(output_dir, test_suite, detailed_rows, summary):
+    ## function to save all the outputs in the required formats in the output directory.
     os.makedirs(output_dir, exist_ok=True)
 
     with open(os.path.join(output_dir, "adversarial_test_suite.json"), "w", encoding="utf-8") as f:
