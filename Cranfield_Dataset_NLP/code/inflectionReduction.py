@@ -5,8 +5,11 @@ from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 
 class InflectionReduction:
-
+	## in this class we will define function that will help in reducing the inflection and bringing down any given word
+	## to its root. 
 	def porterStemmer(self, text):
+		## this defines the stemming technique, where in the word like running becomes run and studying becomes studi.
+		## this is not an efficient way of inflection, but works fast and fine with many applications. 
 		ps = PorterStemmer()
 		reducedText = []
 
@@ -21,6 +24,9 @@ class InflectionReduction:
 		return reducedText
 
 	def wordnetLemmatizer(self, text):
+		## in this function we define the lemmatization technique based on the WordNet database. 
+		## lemmatization essentially reduces the word to its base form which is always a valid dictionary word. 
+		## for example, the word "better" will be reduced to "good" and "running" will be reduced to "run".
 		lemmatizer = WordNetLemmatizer()
 		reducedText = []
 
@@ -35,6 +41,7 @@ class InflectionReduction:
 		return reducedText
 
 	def reduce(self, text):
+		## helper function for porter stemmer's method.
 		reducedText = self.porterStemmer(text)
 
 		return reducedText
