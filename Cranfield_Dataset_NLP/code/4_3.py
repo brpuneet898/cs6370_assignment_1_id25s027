@@ -9,9 +9,10 @@ from nltk.corpus import stopwords
 
 nltk.download('stopwords')
 
-
+## this file is createad for question 4 part 3. It identifies stopwords based on the corpus and compares them with 
+## NLTK's stopword list.
 def main():
-
+    ## Set up paths
     base_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(base_dir)
 
@@ -23,7 +24,7 @@ def main():
 
     with open(dataset_path, "r") as f:
         docs_json = json.load(f)
-
+    ## Extract document bodies
     docs = [doc["body"] for doc in docs_json]
 
     segmenter = SentenceSegmentation()
@@ -38,7 +39,7 @@ def main():
 
         tokens = tokenizer.pennTreeBank(sentences)
         tokenized_docs.append(tokens)
-
+    ## Calculate document frequency for each word
     doc_frequency = Counter()
     total_docs = len(tokenized_docs)
 
